@@ -5,8 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Herramientas interactivas de autocuidado, matriz de check-in emocional y técnica de anclaje (grounding) 5-4-3-2-1 para reducir el estrés y la sobreestimulación.">
     <title>Calm App | Herramientas Interactivas</title>
+    
+    <!-- PRECONNECT: Acelera la conexión a los servidores de terceros -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- CSS Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CARGA DIFERIDA DE FONTAWESOME: Evita que bloquee el renderizado inicial de la página -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <!-- CSS Propio -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="assets/img/calm-flower.svg" type="image/svg+xml"> 
 </head>
@@ -15,7 +26,8 @@
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-                <img src="assets/img/calm-flower.svg" alt="Calm App Logo" width="32" height="32">
+                <!-- Se añade decoding="async" para no bloquear el hilo principal -->
+                <img src="assets/img/calm-flower.svg" alt="Calm App Logo" width="32" height="32" decoding="async">
                 <div>
                     <span>Calm</span>
                     <span class="brand-badge">APP</span>
@@ -127,7 +139,7 @@
                             </div>
                             <div class="sensory-item" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-regular fa-circle text-muted" aria-hidden="true"></i> La textura de tu ropa</div>
                             <div class="sensory-item" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-regular fa-circle text-muted" aria-hidden="true"></i> La superficie del asiento/mesa</div>
-                            <div class="sensory-item" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-regular fa-circle text-muted" aria-hidden="true"></i> La temperatura de tus hands</div>
+                            <div class="sensory-item" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-regular fa-circle text-muted" aria-hidden="true"></i> La temperatura de tus manos</div>
                             <div class="sensory-item" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-regular fa-circle text-muted" aria-hidden="true"></i> Un objeto cercano con la yema del dedo</div>
                         </div>
                     </div>
@@ -252,7 +264,8 @@
             <div class="row g-4 mb-5">
                 <div class="col-lg-4">
                     <div class="d-flex align-items-center gap-2 mb-3">
-                        <img src="assets/img/calm-flower.svg" alt="Calm Logo" width="32" height="32" class="bg-white rounded p-1">
+                        <!-- Img lazy porque está fuera de pantalla inicial -->
+                        <img src="assets/img/calm-flower.svg" alt="Calm Logo" width="32" height="32" class="bg-white rounded p-1" loading="lazy" decoding="async">
                         <span class="fs-4 fw-bold text-white">Calm App</span>
                     </div>
                     <p class="text-muted small pe-lg-4">Proyecto académico de diseño y desarrollo web.</p>
@@ -288,7 +301,8 @@
         <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
     </button>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/app.js"></script>
+    <!-- Atributo DEFER para no detener el dibujado de la web mientras carga JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/app.js" defer></script>
 </body>
 </html> 
