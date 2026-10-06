@@ -30,18 +30,6 @@ Calm-App/
 └── README.md
 ```
 
-## Cómo ejecutar
-
-No necesita servidor ni Node.js.
-
-1. Abre la carpeta en Visual Studio Code.
-2. Abre `index.html`.
-3. Recomendado: instala la extensión **Live Server** y pulsa **Go Live**.
-4. Prueba el menú completo:
-   - Inicio → Herramientas
-   - Herramientas → Recursos y apoyo
-   - Recursos → Herramientas / fuentes externas
-
 ## Qué partes de la rúbrica cubre
 
 ### Menú de navegación
@@ -106,27 +94,3 @@ El sitio cuenta con interacción real:
 ## Importante
 
 Calm App es un proyecto educativo. No diagnostica, no sustituye atención profesional y no pretende atender emergencias. Los datos de contacto deben verificarse directamente en fuentes institucionales antes de una entrega final si el profesor solicita vigencia de la información.
-
-## Presentación para evaluación
-
-Al exponer el proyecto, destaca:
-
-1. Se eligió Bootstrap 5.3.8 por su grid y componentes.
-2. El framework fue personalizado con CSS propio para evitar el aspecto predeterminado.
-3. La paleta pastel busca reducir ruido visual y mantener una identidad consistente.
-4. Las herramientas son interactivas y no solo informativas.
-5. Las tres páginas están conectadas mediante el menú.
-6. Se contempló responsividad, accesibilidad básica y microinteracciones.
-7. La página de recursos enlaza instituciones reales y distingue entre apoyo educativo y atención profesional.
-
-## GitHub Pages
-
-Después de publicar el repositorio en GitHub:
-
-1. Entra al repositorio.
-2. Ve a **Settings → Pages**.
-3. En **Build and deployment**, selecciona **Deploy from a branch**.
-4. Elige la rama `main` y la carpeta `/ (root)`.
-5. Guarda.
-6. GitHub generará la URL pública del sitio.
-
