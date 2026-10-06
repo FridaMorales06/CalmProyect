@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calm App | Herramientas Interactivas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/img/calm-flower.svg" alt="Calm App Logo" width="32" height="32">
+                <div>
+                    <span>Calm</span>
+                    <span class="brand-badge">APP</span>
+                </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-lg-center gap-2 my-3 my-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house me-1"></i> Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="herramientas.html"><i class="fa-solid fa-wand-magic-sparkles me-1"></i> Herramientas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="recursos.html"><i class="fa-solid fa-heart me-1"></i> Recursos y apoyo</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5 flex-grow-1">
+        
+        <div class="text-center max-width-md mx-auto mb-5">
+            <span class="label-tracking d-block mb-2">AUTOCUIDADO Y ANCLAJE</span>
+            <h1 class="display-4">Herramientas Interactivas</h1>
+            <p class="text-muted">Elige el recurso que mejor se adapte a tu estado actual para reducir la sobreestimulación.</p>
+        </div>
+
+        <!-- Matriz Emocional (Check-In) -->
+        <section id="checkin" class="mb-5">
+            <div class="calm-card p-4 p-md-5">
+                <div class="text-center mb-4">
+                    <span class="label-tracking d-block mb-1">MATRIZ DE CHECK-IN</span>
+                    <h3 class="serif-title mb-2">¿Cómo te sientes en este momento?</h3>
+                    <p class="text-muted small">Haz clic en el estado emocional para ver una recomendación específica.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-6 col-md-3">
+                        <div class="emotion-card" data-bs-toggle="modal" data-bs-target="#modalAnsiedad">
+                            <div class="emotion-icon-wrapper"><i class="fa-solid fa-bolt"></i></div>
+                            <h6 class="fw-bold mb-1">Ansiedad</h6>
+                            <span class="text-muted small">Pensamientos acelerados</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="emotion-card" data-bs-toggle="modal" data-bs-target="#modalEstres">
+                            <div class="emotion-icon-wrapper"><i class="fa-solid fa-fire"></i></div>
+                            <h6 class="fw-bold mb-1">Enojo / Estrés</h6>
+                            <span class="text-muted small">Tensión acumulada</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="emotion-card" data-bs-toggle="modal" data-bs-target="#modalTristeza">
+                            <div class="emotion-icon-wrapper"><i class="fa-solid fa-cloud-rain"></i></div>
+                            <h6 class="fw-bold mb-1">Tristeza</h6>
+                            <span class="text-muted small">Pesadez o desánimo</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="emotion-card" data-bs-toggle="modal" data-bs-target="#modalFatiga">
+                            <div class="emotion-icon-wrapper"><i class="fa-solid fa-battery-quarter"></i></div>
+                            <h6 class="fw-bold mb-1">Fatiga Mental</h6>
+                            <span class="text-muted small">Saturación visual</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Escáner Sensorial 5-4-3-2-1 -->
+        <section id="escaner" class="mb-5">
+            <div class="calm-card p-4 p-md-5">
+                <div class="text-center mb-4">
+                    <span class="label-tracking d-block mb-1">TÉCNICA DE ANCLAJE (GROUNDING)</span>
+                    <h3 class="serif-title mb-2">Escáner Sensorial 5–4–3–2–1</h3>
+                    <p class="text-muted small mb-3">Toca cada elemento conforme lo percibas a tu alrededor para completar el recorrido.</p>
+                    
+                    <div class="progress max-width-md mx-auto" style="height: 10px; border-radius: 10px;">
+                        <div id="grounding-progress" class="progress-bar" style="background-color: var(--accent-mauve); width: 0%;"></div>
+                    </div>
+                    <small id="progress-text" class="text-muted d-block mt-2">0 de 15 completados</small>
+                </div>
+
+                <div id="grounding-complete-alert" class="alert alert-success d-none text-center rounded-4 border-0 p-3 mb-4" style="background-color: #E8F5E9; color: #2E7D32;">
+                    <i class="fa-solid fa-circle-check me-2"></i><strong>¡Ejercicio completado!</strong> Has conectado con tu entorno inmediato.
+                </div>
+
+                <div class="row g-4">
+                    <!-- 5 Cosas que ves -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="sensory-step-card">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge rounded-pill bg-light text-mauve fw-bold">5</span>
+                                <h6 class="fw-bold mb-0"><i class="fa-regular fa-eye me-1"></i> Cosas que VES</h6>
+                            </div>
+                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> Un objeto de color claro</div>
+                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> Una textura en la pared/suelo</div>
+                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> Un detalle con letras o texto</div>
+                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> Una sombra o reflejo de luz</div>
+                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> Un elemento a tu alrededor</div>
+                        </div>
+                    </div>
+
+                    <!-- 4 Cosas que tocas -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="sensory-step-card">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge rounded-pill bg-light text-mauve fw-bold">4</span>
+                                <h6 class="fw-bold mb-0"><i class="fa-solid fa-hand-sparkles me-1"></i> Cosas que TOCAS</h6>
+                            </div>
+                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> La textura de tu ropa</div>
+                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> La superficie del asiento/mesa</div>
+                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> La temperatura de tus manos</div>
+                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> Un objeto cercano con la yema del dedo</div>
+                        </div>
+                    </div>
+
+                    <!-- 3 Cosas que escuchas -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="sensory-step-card">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge rounded-pill bg-light text-mauve fw-bold">3</span>
+                                <h6 class="fw-bold mb-0"><i class="fa-solid fa-ear-listen me-1"></i> Cosas que ESCUCHAS</h6>
+                            </div>
+                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> Un sonido lejano del exterior</div>
+                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> Un sonido dentro de la habitación</div>
+                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> El flujo continuo de tu respiración</div>
+                        </div>
+                    </div>
+
+                    <!-- 2 Cosas que hueles -->
+                    <div class="col-md-6 col-lg-6">
+                        <div class="sensory-step-card">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge rounded-pill bg-light text-mauve fw-bold">2</span>
+                                <h6 class="fw-bold mb-0"><i class="fa-solid fa-wind me-1"></i> Cosas que HUELES</h6>
+                            </div>
+                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> El aroma del aire ambiental</div>
+                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> El aroma suave de tu tela o jabón</div>
+                        </div>
+                    </div>
+
+                    <!-- 1 Cosa que saboreas -->
+                    <div class="col-md-12 col-lg-6">
+                        <div class="sensory-step-card">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge rounded-pill bg-light text-mauve fw-bold">1</span>
+                                <h6 class="fw-bold mb-0"><i class="fa-solid fa-utensils me-1"></i> Cosa que SABOREAS</h6>
+                            </div>
+                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> El sabor neutro o fresco en tu boca</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MODALES DE CHECK-IN CON INFORMACIÓN INDEPENDIENTE -->
+    <div class="modal fade" id="modalAnsiedad" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 rounded-4 p-4 text-center">
+                <div class="emotion-icon-wrapper mx-auto mb-3"><i class="fa-solid fa-bolt"></i></div>
+                <h4 class="serif-title mb-2">Para la Ansiedad</h4>
+                <p class="text-muted small mb-3">Cuando la mente se acelera, enfócate en respuestas físicas inmediatas:</p>
+                <div class="text-start bg-light p-3 rounded-3 mb-4 small">
+                    <ul class="mb-0 ps-3">
+                        <li class="mb-2">Aplica agua fría en tus muñecas o rostro para activar el reflejo de calma corporal.</li>
+                        <li class="mb-2">Restringe el foco: cuenta en forma descendente de 100 en 100 o de 7 en 7.</li>
+                        <li>Completa el ejercicio 5-4-3-2-1 que está disponible en esta página.</li>
+                    </ul>
+                </div>
+                <button type="button" class="btn-calm-pill w-100 justify-content-center" data-bs-dismiss="modal">Entendido</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalEstres" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 rounded-4 p-4 text-center">
+                <div class="emotion-icon-wrapper mx-auto mb-3"><i class="fa-solid fa-fire"></i></div>
+                <h4 class="serif-title mb-2">Para el Estrés o Enojo</h4>
+                <p class="text-muted small mb-3">Libera la tensión muscular contenida:</p>
+                <div class="text-start bg-light p-3 rounded-3 mb-4 small">
+                    <ul class="mb-0 ps-3">
+                        <li class="mb-2">Aprieta los puños o los hombros durante 5 segundos y suéltalos de golpe.</li>
+                        <li class="mb-2">Escribe en una hoja tus pensamientos sin filtro y luego dóblala o rompela.</li>
+                        <li>Cambia físicamente de postura o camina unos pasos para romper la inercia.</li>
+                    </ul>
+                </div>
+                <button type="button" class="btn-calm-pill w-100 justify-content-center" data-bs-dismiss="modal">Entendido</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalTristeza" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 rounded-4 p-4 text-center">
+                <div class="emotion-icon-wrapper mx-auto mb-3"><i class="fa-solid fa-cloud-rain"></i></div>
+                <h4 class="serif-title mb-2">Para la Tristeza</h4>
+                <p class="text-muted small mb-3">Prioriza la autocompasión y la contención:</p>
+                <div class="text-start bg-light p-3 rounded-3 mb-4 small">
+                    <ul class="mb-0 ps-3">
+                        <li class="mb-2">Permítete validar el sentimiento sin juzgarte ni forzar una actitud positiva inmediata.</li>
+                        <li class="mb-2">Envía un mensaje breve a una persona de confianza sin necesidad de dar explicaciones largas.</li>
+                        <li>Arrópate con una prenda cómoda o mantente en un espacio tibio e iluminado.</li>
+                    </ul>
+                </div>
+                <button type="button" class="btn-calm-pill w-100 justify-content-center" data-bs-dismiss="modal">Entendido</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalFatiga" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 rounded-4 p-4 text-center">
+                <div class="emotion-icon-wrapper mx-auto mb-3"><i class="fa-solid fa-battery-quarter"></i></div>
+                <h4 class="serif-title mb-2">Para la Fatiga Mental</h4>
+                <p class="text-muted small mb-3">Reduce la sobrecarga sensorial:</p>
+                <div class="text-start bg-light p-3 rounded-3 mb-4 small">
+                    <ul class="mb-0 ps-3">
+                        <li class="mb-2">Aleja la mirada de las pantallas durante al menos 3 minutos mirando al horizonte.</li>
+                        <li class="mb-2">Realiza un suave estiramiento de cuello y muñecas.</li>
+                        <li>Toma un vaso con agua lentamente prestando atención a la temperatura.</li>
+                    </ul>
+                </div>
+                <button type="button" class="btn-calm-pill w-100 justify-content-center" data-bs-dismiss="modal">Entendido</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Pizarra -->
+    <footer class="footer-dark mt-auto">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <img src="assets/img/calm-flower.svg" alt="Calm Logo" width="28" height="28" style="filter: brightness(2);">
+                        <span class="fs-4 fw-bold text-white">Calm App</span>
+                    </div>
+                    <p class="text-muted small pe-lg-4">Proyecto académico de diseño y desarrollo web.</p>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h6 class="text-white fw-bold mb-3">NAVEGA</h6>
+                    <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="herramientas.html">Herramientas</a></li>
+                        <li><a href="recursos.html">Recursos</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h6 class="text-white fw-bold mb-3">PROYECTO</h6>
+                    <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+                        <li><a href="index.html">Objetivo</a></li>
+                        <li><a href="herramientas.html#checkin">Check-In</a></li>
+                        <li><a href="recursos.html">Apoyo</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="text-white fw-bold mb-3">NOTA IMPORTANTE</h6>
+                    <p class="text-muted small">Calm App no diagnostica ni reemplaza psicoterapia o servicios de emergencia.</p>
+                </div>
+            </div>
+            <div class="border-top border-secondary pt-4 text-center small text-muted">
+                <p class="mb-0">&copy; 2026 Calm App · Proyecto académico</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="btn-back-top" id="btnBackTop" title="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600" role="img" aria-labelledby="title desc">
+  <title id="title">Ilustración decorativa de flores suaves</title>
+  <desc id="desc">Formas orgánicas en colores pastel para acompañar el diseño de Calm App.</desc>
+  <rect width="600" height="600" rx="100" fill="#fff7f6"/>
+  <circle cx="430" cy="140" r="120" fill="#dfeafb"/>
+  <circle cx="150" cy="430" r="135" fill="#f5dfe8"/>
+  <path d="M300 500c-18-106 3-209 53-300" fill="none" stroke="#85a897" stroke-width="15" stroke-linecap="round"/>
+  <g fill="#f0c9d8">
+    <circle cx="350" cy="190" r="52"/>
+    <circle cx="410" cy="240" r="52"/>
+    <circle cx="330" cy="285" r="52"/>
+    <circle cx="280" cy="235" r="52"/>
+    <circle cx="355" cy="240" r="36" fill="#e7b5c9"/>
+  </g>
+  <g fill="#d4e8df">
+    <path d="M310 390c-75-47-115-2-119 70 70 13 117-22 119-70z"/>
+    <path d="M350 345c79-43 118 5 120 75-68 9-116-27-120-75z"/>
+  </g>
+</svg>
