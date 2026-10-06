@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Herramientas interactivas de autocuidado, matriz de check-in emocional y técnica de anclaje (grounding) 5-4-3-2-1 para reducir el estrés y la sobreestimulación.">
     <title>Calm App | Herramientas Interactivas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -20,14 +21,14 @@
                     <span class="brand-badge">APP</span>
                 </div>
             </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Abrir menú de navegación">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav align-items-lg-center gap-2 my-3 my-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house me-1"></i> Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="herramientas.html"><i class="fa-solid fa-wand-magic-sparkles me-1"></i> Herramientas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="recursos.html"><i class="fa-solid fa-heart me-1"></i> Recursos y apoyo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house me-1" aria-hidden="true"></i> Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="herramientas.html" aria-current="page"><i class="fa-solid fa-wand-magic-sparkles me-1" aria-hidden="true"></i> Herramientas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="recursos.html"><i class="fa-solid fa-heart me-1" aria-hidden="true"></i> Recursos y apoyo</a></li>
                 </ul>
             </div>
         </div>
@@ -46,36 +47,36 @@
             <div class="calm-card p-4 p-md-5">
                 <div class="text-center mb-4">
                     <span class="label-tracking d-block mb-1">MATRIZ DE CHECK-IN</span>
-                    <h3 class="serif-title mb-2">¿Cómo te sientes en este momento?</h3>
+                    <h2 class="serif-title h3 mb-2">¿Cómo te sientes en este momento?</h2>
                     <p class="text-muted small">Haz clic en el estado emocional para ver una recomendación específica.</p>
                 </div>
 
                 <div class="row g-4">
                     <div class="col-6 col-md-3">
-                        <div class="emotion-card" data-bs-toggle="modal" data-bs-target="#modalAnsiedad">
-                            <div class="emotion-icon-wrapper"><i class="fa-solid fa-bolt"></i></div>
-                            <h6 class="fw-bold mb-1">Ansiedad</h6>
+                        <div class="emotion-card" role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#modalAnsiedad">
+                            <div class="emotion-icon-wrapper"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
+                            <h3 class="h6 fw-bold mb-1">Ansiedad</h3>
                             <span class="text-muted small">Pensamientos acelerados</span>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
-                        <div class="emotion-card" data-bs-toggle="modal" data-bs-target="#modalEstres">
-                            <div class="emotion-icon-wrapper"><i class="fa-solid fa-fire"></i></div>
-                            <h6 class="fw-bold mb-1">Enojo / Estrés</h6>
+                        <div class="emotion-card" role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#modalEstres">
+                            <div class="emotion-icon-wrapper"><i class="fa-solid fa-fire" aria-hidden="true"></i></div>
+                            <h3 class="h6 fw-bold mb-1">Enojo / Estrés</h3>
                             <span class="text-muted small">Tensión acumulada</span>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
-                        <div class="emotion-card" data-bs-toggle="modal" data-bs-target="#modalTristeza">
-                            <div class="emotion-icon-wrapper"><i class="fa-solid fa-cloud-rain"></i></div>
-                            <h6 class="fw-bold mb-1">Tristeza</h6>
+                        <div class="emotion-card" role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#modalTristeza">
+                            <div class="emotion-icon-wrapper"><i class="fa-solid fa-cloud-rain" aria-hidden="true"></i></div>
+                            <h3 class="h6 fw-bold mb-1">Tristeza</h3>
                             <span class="text-muted small">Pesadez o desánimo</span>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
-                        <div class="emotion-card" data-bs-toggle="modal" data-bs-target="#modalFatiga">
-                            <div class="emotion-icon-wrapper"><i class="fa-solid fa-battery-quarter"></i></div>
-                            <h6 class="fw-bold mb-1">Fatiga Mental</h6>
+                        <div class="emotion-card" role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#modalFatiga">
+                            <div class="emotion-icon-wrapper"><i class="fa-solid fa-battery-quarter" aria-hidden="true"></i></div>
+                            <h3 class="h6 fw-bold mb-1">Fatiga Mental</h3>
                             <span class="text-muted small">Saturación visual</span>
                         </div>
                     </div>
@@ -88,17 +89,17 @@
             <div class="calm-card p-4 p-md-5">
                 <div class="text-center mb-4">
                     <span class="label-tracking d-block mb-1">TÉCNICA DE ANCLAJE (GROUNDING)</span>
-                    <h3 class="serif-title mb-2">Escáner Sensorial 5–4–3–2–1</h3>
+                    <h2 class="serif-title h3 mb-2">Escáner Sensorial 5–4–3–2–1</h2>
                     <p class="text-muted small mb-3">Toca cada elemento conforme lo percibas a tu alrededor para completar el recorrido.</p>
                     
                     <div class="progress max-width-md mx-auto" style="height: 10px; border-radius: 10px;">
-                        <div id="grounding-progress" class="progress-bar" style="background-color: var(--accent-mauve); width: 0%;"></div>
+                        <div id="grounding-progress" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="15" aria-label="Progreso del escáner sensorial" style="background-color: var(--accent-mauve); width: 0%;"></div>
                     </div>
                     <small id="progress-text" class="text-muted d-block mt-2">0 de 15 completados</small>
                 </div>
 
                 <div id="grounding-complete-alert" class="alert alert-success d-none text-center rounded-4 border-0 p-3 mb-4" style="background-color: #E8F5E9; color: #2E7D32;">
-                    <i class="fa-solid fa-circle-check me-2"></i><strong>¡Ejercicio completado!</strong> Has conectado con tu entorno inmediato.
+                    <i class="fa-solid fa-circle-check me-2" aria-hidden="true"></i><strong>¡Ejercicio completado!</strong> Has conectado con tu entorno inmediato.
                 </div>
 
                 <div class="row g-4">
@@ -107,13 +108,13 @@
                         <div class="sensory-step-card">
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <span class="badge rounded-pill bg-light text-mauve fw-bold">5</span>
-                                <h6 class="fw-bold mb-0"><i class="fa-regular fa-eye me-1"></i> Cosas que VES</h6>
+                                <h3 class="h6 fw-bold mb-0"><i class="fa-regular fa-eye me-1" aria-hidden="true"></i> Cosas que VES</h3>
                             </div>
-                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> Un objeto de color claro</div>
-                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> Una textura en la pared/suelo</div>
-                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> Un detalle con letras o texto</div>
-                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> Una sombra o reflejo de luz</div>
-                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> Un elemento a tu alrededor</div>
+                            <div class="sensory-item" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-regular fa-circle text-muted" aria-hidden="true"></i> Un objeto de color claro</div>
+                            <div class="sensory-item" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-regular fa-circle text-muted" aria-hidden="true"></i> Una textura en la pared/suelo</div>
+                            <div class="sensory-item" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-regular fa-circle text-muted" aria-hidden="true"></i> Un detalle con letras o texto</div>
+                            <div class="sensory-item" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-regular fa-circle text-muted" aria-hidden="true"></i> Una sombra o reflejo de luz</div>
+                            <div class="sensory-item" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-regular fa-circle text-muted" aria-hidden="true"></i> Un elemento a tu alrededor</div>
                         </div>
                     </div>
 
@@ -122,12 +123,12 @@
                         <div class="sensory-step-card">
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <span class="badge rounded-pill bg-light text-mauve fw-bold">4</span>
-                                <h6 class="fw-bold mb-0"><i class="fa-solid fa-hand-sparkles me-1"></i> Cosas que TOCAS</h6>
+                                <h3 class="h6 fw-bold mb-0"><i class="fa-solid fa-hand-sparkles me-1" aria-hidden="true"></i> Cosas que TOCAS</h3>
                             </div>
-                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> La textura de tu ropa</div>
-                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> La superficie del asiento/mesa</div>
-                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> La temperatura de tus manos</div>
-                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> Un objeto cercano con la yema del dedo</div>
+                            <div class="sensory-item" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-regular fa-circle text-muted" aria-hidden="true"></i> La textura de tu ropa</div>
+                            <div class="sensory-item" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-regular fa-circle text-muted" aria-hidden="true"></i> La superficie del asiento/mesa</div>
+                            <div class="sensory-item" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-regular fa-circle text-muted" aria-hidden="true"></i> La temperatura de tus hands</div>
+                            <div class="sensory-item" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-regular fa-circle text-muted" aria-hidden="true"></i> Un objeto cercano con la yema del dedo</div>
                         </div>
                     </div>
 
@@ -136,11 +137,11 @@
                         <div class="sensory-step-card">
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <span class="badge rounded-pill bg-light text-mauve fw-bold">3</span>
-                                <h6 class="fw-bold mb-0"><i class="fa-solid fa-ear-listen me-1"></i> Cosas que ESCUCHAS</h6>
+                                <h3 class="h6 fw-bold mb-0"><i class="fa-solid fa-ear-listen me-1" aria-hidden="true"></i> Cosas que ESCUCHAS</h3>
                             </div>
-                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> Un sonido lejano del exterior</div>
-                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> Un sonido dentro de la habitación</div>
-                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> El flujo continuo de tu respiración</div>
+                            <div class="sensory-item" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-regular fa-circle text-muted" aria-hidden="true"></i> Un sonido lejano del exterior</div>
+                            <div class="sensory-item" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-regular fa-circle text-muted" aria-hidden="true"></i> Un sonido dentro de la habitación</div>
+                            <div class="sensory-item" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-regular fa-circle text-muted" aria-hidden="true"></i> El flujo continuo de tu respiración</div>
                         </div>
                     </div>
 
@@ -149,10 +150,10 @@
                         <div class="sensory-step-card">
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <span class="badge rounded-pill bg-light text-mauve fw-bold">2</span>
-                                <h6 class="fw-bold mb-0"><i class="fa-solid fa-wind me-1"></i> Cosas que HUELES</h6>
+                                <h3 class="h6 fw-bold mb-0"><i class="fa-solid fa-wind me-1" aria-hidden="true"></i> Cosas que HUELES</h3>
                             </div>
-                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> El aroma del aire ambiental</div>
-                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> El aroma suave de tu tela o jabón</div>
+                            <div class="sensory-item" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-regular fa-circle text-muted" aria-hidden="true"></i> El aroma del aire ambiental</div>
+                            <div class="sensory-item" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-regular fa-circle text-muted" aria-hidden="true"></i> El aroma suave de tu tela o jabón</div>
                         </div>
                     </div>
 
@@ -161,9 +162,9 @@
                         <div class="sensory-step-card">
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <span class="badge rounded-pill bg-light text-mauve fw-bold">1</span>
-                                <h6 class="fw-bold mb-0"><i class="fa-solid fa-utensils me-1"></i> Cosa que SABOREAS</h6>
+                                <h3 class="h6 fw-bold mb-0"><i class="fa-solid fa-utensils me-1" aria-hidden="true"></i> Cosa que SABOREAS</h3>
                             </div>
-                            <div class="sensory-item"><i class="fa-regular fa-circle text-muted"></i> El sabor neutro o fresco en tu boca</div>
+                            <div class="sensory-item" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-regular fa-circle text-muted" aria-hidden="true"></i> El sabor neutro o fresco en tu boca</div>
                         </div>
                     </div>
                 </div>
@@ -172,12 +173,12 @@
 
     </main>
 
-    <!-- MODALES DE CHECK-IN CON INFORMACIÓN INDEPENDIENTE -->
-    <div class="modal fade" id="modalAnsiedad" tabindex="-1">
+    <!-- MODALES DE CHECK-IN -->
+    <div class="modal fade" id="modalAnsiedad" tabindex="-1" aria-labelledby="modalAnsiedadLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content border-0 rounded-4 p-4 text-center">
-                <div class="emotion-icon-wrapper mx-auto mb-3"><i class="fa-solid fa-bolt"></i></div>
-                <h4 class="serif-title mb-2">Para la Ansiedad</h4>
+                <div class="emotion-icon-wrapper mx-auto mb-3"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
+                <h2 class="serif-title h4 mb-2" id="modalAnsiedadLabel">Para la Ansiedad</h2>
                 <p class="text-muted small mb-3">Cuando la mente se acelera, enfócate en respuestas físicas inmediatas:</p>
                 <div class="text-start bg-light p-3 rounded-3 mb-4 small">
                     <ul class="mb-0 ps-3">
@@ -191,16 +192,16 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modalEstres" tabindex="-1">
+    <div class="modal fade" id="modalEstres" tabindex="-1" aria-labelledby="modalEstresLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content border-0 rounded-4 p-4 text-center">
-                <div class="emotion-icon-wrapper mx-auto mb-3"><i class="fa-solid fa-fire"></i></div>
-                <h4 class="serif-title mb-2">Para el Estrés o Enojo</h4>
+                <div class="emotion-icon-wrapper mx-auto mb-3"><i class="fa-solid fa-fire" aria-hidden="true"></i></div>
+                <h2 class="serif-title h4 mb-2" id="modalEstresLabel">Para el Estrés o Enojo</h2>
                 <p class="text-muted small mb-3">Libera la tensión muscular contenida:</p>
                 <div class="text-start bg-light p-3 rounded-3 mb-4 small">
                     <ul class="mb-0 ps-3">
                         <li class="mb-2">Aprieta los puños o los hombros durante 5 segundos y suéltalos de golpe.</li>
-                        <li class="mb-2">Escribe en una hoja tus pensamientos sin filtro y luego dóblala o rompela.</li>
+                        <li class="mb-2">Escribe en una hoja tus pensamientos sin filtro y luego dóblala o rompéla.</li>
                         <li>Cambia físicamente de postura o camina unos pasos para romper la inercia.</li>
                     </ul>
                 </div>
@@ -209,11 +210,11 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modalTristeza" tabindex="-1">
+    <div class="modal fade" id="modalTristeza" tabindex="-1" aria-labelledby="modalTristezaLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content border-0 rounded-4 p-4 text-center">
-                <div class="emotion-icon-wrapper mx-auto mb-3"><i class="fa-solid fa-cloud-rain"></i></div>
-                <h4 class="serif-title mb-2">Para la Tristeza</h4>
+                <div class="emotion-icon-wrapper mx-auto mb-3"><i class="fa-solid fa-cloud-rain" aria-hidden="true"></i></div>
+                <h2 class="serif-title h4 mb-2" id="modalTristezaLabel">Para la Tristeza</h2>
                 <p class="text-muted small mb-3">Prioriza la autocompasión y la contención:</p>
                 <div class="text-start bg-light p-3 rounded-3 mb-4 small">
                     <ul class="mb-0 ps-3">
@@ -227,11 +228,11 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modalFatiga" tabindex="-1">
+    <div class="modal fade" id="modalFatiga" tabindex="-1" aria-labelledby="modalFatigaLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content border-0 rounded-4 p-4 text-center">
-                <div class="emotion-icon-wrapper mx-auto mb-3"><i class="fa-solid fa-battery-quarter"></i></div>
-                <h4 class="serif-title mb-2">Para la Fatiga Mental</h4>
+                <div class="emotion-icon-wrapper mx-auto mb-3"><i class="fa-solid fa-battery-quarter" aria-hidden="true"></i></div>
+                <h2 class="serif-title h4 mb-2" id="modalFatigaLabel">Para la Fatiga Mental</h2>
                 <p class="text-muted small mb-3">Reduce la sobrecarga sensorial:</p>
                 <div class="text-start bg-light p-3 rounded-3 mb-4 small">
                     <ul class="mb-0 ps-3">
@@ -283,11 +284,11 @@
         </div>
     </footer>
 
-    <div class="btn-back-top" id="btnBackTop" title="Volver arriba">
-        <i class="fa-solid fa-arrow-up"></i>
-    </div>
+    <button class="btn-back-top border-0" id="btnBackTop" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/app.js"></script>
 </body>
-</html>
+</html> 
