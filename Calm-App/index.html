@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calm App - Herramientas digitales de apoyo y primeros auxilios emocionales para momentos de estrés y sobreestimulación.">
     <title>Calm App | Herramientas Digitales de Apoyo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -21,17 +22,18 @@
                     <span class="brand-badge">APP</span>
                 </div>
             </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <!-- Se agregó aria-label al botón de menú móvil -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Abrir menú de navegación">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav align-items-lg-center gap-2 my-3 my-lg-0">
-                    <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fa-solid fa-house me-1"></i> Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="herramientas.html"><i class="fa-solid fa-wand-magic-sparkles me-1"></i> Herramientas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="recursos.html"><i class="fa-solid fa-heart me-1"></i> Recursos y apoyo</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fa-solid fa-house me-1" aria-hidden="true"></i> Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="herramientas.html"><i class="fa-solid fa-wand-magic-sparkles me-1" aria-hidden="true"></i> Herramientas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="recursos.html"><i class="fa-solid fa-heart me-1" aria-hidden="true"></i> Recursos y apoyo</a></li>
                 </ul>
                 <div class="ms-lg-3">
-                    <a href="herramientas.html" class="btn-calm-pill">Necesito un momento <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                    <a href="herramientas.html" class="btn-calm-pill">Necesito un momento <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
@@ -44,26 +46,26 @@
             <div class="container">
                 <div class="row align-items-center justify-content-between g-5">
                     <div class="col-lg-6 text-center text-lg-start">
-                        <span class="label-tracking d-block mb-3"><i class="fa-solid fa-circle text-mauve me-1" style="font-size: 0.5rem;"></i> UN PEQUEÑO ESPACIO PARA PAUSAR</span>
+                        <span class="label-tracking d-block mb-3"><i class="fa-solid fa-circle text-mauve me-1" style="font-size: 0.5rem;" aria-hidden="true"></i> UN PEQUEÑO ESPACIO PARA PAUSAR</span>
                         <h1 class="display-3 mb-4">Respira.<br><span class="fst-italic text-mauve">Vuelve a ti.</span></h1>
                         <p class="lead text-muted mb-4 pe-lg-4">Calm App reúne ejercicios breves de atención al presente y autorregulación para momentos de estrés, ansiedad leve o sobreestimulación.</p>
                         
                         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-3 mb-4">
-                            <a href="herramientas.html" class="btn-calm-pill">Explorar herramientas <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            <a href="recursos.html" class="btn-calm-outline">Ver apoyo <i class="fa-regular fa-heart"></i></a>
+                            <a href="herramientas.html" class="btn-calm-pill">Explorar herramientas <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            <a href="recursos.html" class="btn-calm-outline">Ver apoyo <i class="fa-regular fa-heart" aria-hidden="true"></i></a>
                         </div>
 
                         <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-2 pt-2">
-                            <span class="hero-badge"><i class="fa-solid fa-mobile-screen"></i> Sin registro</span>
-                            <span class="hero-badge"><i class="fa-regular fa-clock"></i> Ejercicios breves</span>
-                            <span class="hero-badge"><i class="fa-solid fa-shield-halved"></i> Sin juicios</span>
+                            <span class="hero-badge"><i class="fa-solid fa-mobile-screen" aria-hidden="true"></i> Sin registro</span>
+                            <span class="hero-badge"><i class="fa-regular fa-clock" aria-hidden="true"></i> Ejercicios breves</span>
+                            <span class="hero-badge"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Sin juicios</span>
                         </div>
                     </div>
 
                     <div class="col-lg-5 text-center">
                         <div class="hero-floating-card mx-auto">
                             <span class="badge rounded-pill bg-light text-mauve border border-light px-3 py-2 mb-3 fw-semibold">
-                                <i class="fa-solid fa-sparkles me-1"></i> momento presente
+                                <i class="fa-solid fa-sparkles me-1" aria-hidden="true"></i> momento presente
                             </span>
                             <div class="my-4">
                                 <img src="assets/img/calm-flower.svg" alt="Momento Presente" class="img-fluid" style="max-height: 140px;">
@@ -89,28 +91,28 @@
                 <div class="row g-4">
                     <div class="col-md-6 col-lg-3">
                         <div class="calm-card h-100 p-4">
-                            <div class="emotion-icon-wrapper mb-3"><i class="fa-solid fa-leaf"></i></div>
+                            <div class="emotion-icon-wrapper mb-3"><i class="fa-solid fa-leaf" aria-hidden="true"></i></div>
                             <h5 class="fw-bold mb-2">Tómate una pausa</h5>
                             <p class="text-muted small mb-0">No hay ninguna prisa. Este es un rincón seguro para respirar y desconectar el tiempo que necesites.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <div class="calm-card h-100 p-4">
-                            <div class="emotion-icon-wrapper mb-3"><i class="fa-solid fa-anchor"></i></div>
+                            <div class="emotion-icon-wrapper mb-3"><i class="fa-solid fa-anchor" aria-hidden="true"></i></div>
                             <h5 class="fw-bold mb-2">Vuelve al presente</h5>
                             <p class="text-muted small mb-0">Ejercicios breves y amigables para ayudarte a aterrizar cuando sientas que la mente va muy rápido.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <div class="calm-card h-100 p-4">
-                            <div class="emotion-icon-wrapper mb-3"><i class="fa-solid fa-shield-heart"></i></div>
+                            <div class="emotion-icon-wrapper mb-3"><i class="fa-solid fa-shield-heart" aria-hidden="true"></i></div>
                             <h5 class="fw-bold mb-2">Sin juicios</h5>
                             <p class="text-muted small mb-0">Está bien no sentirse al 100% todo el tiempo. Aquí puedes soltar la presión de tener que resolverlo todo hoy.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <div class="calm-card h-100 p-4">
-                            <div class="emotion-icon-wrapper mb-3"><i class="fa-solid fa-seedling"></i></div>
+                            <div class="emotion-icon-wrapper mb-3"><i class="fa-solid fa-seedling" aria-hidden="true"></i></div>
                             <h5 class="fw-bold mb-2">Un paso a la vez</h5>
                             <p class="text-muted small mb-0">Avanza a tu propio ritmo mediante herramientas sencillas que te guían suavemente y sin abrumar.</p>
                         </div>
@@ -136,7 +138,7 @@
                                 <h3 class="serif-title mb-2">Check-In emocional</h3>
                                 <p class="text-muted mb-3 mb-md-0">Identifica cómo te sientes y recibe una micro-acción sencilla adaptada a este momento.</p>
                             </div>
-                            <a href="herramientas.html#checkin" class="btn-calm-outline text-nowrap">Hacer check-in <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                            <a href="herramientas.html#checkin" class="btn-calm-outline text-nowrap">Hacer check-in <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i></a>
                         </div>
                     </div>
 
@@ -147,7 +149,7 @@
                                 <h3 class="serif-title mb-2">Escáner 5–4–3–2–1</h3>
                                 <p class="text-muted mb-3 mb-md-0">Un recorrido sensorial paso a paso para volver a notar tu entorno inmediato de forma guiada e interactiva.</p>
                             </div>
-                            <a href="herramientas.html#escaner" class="btn-calm-outline text-nowrap">Empezar grounding <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                            <a href="herramientas.html#escaner" class="btn-calm-outline text-nowrap">Empezar grounding <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i></a>
                         </div>
                     </div>
 
@@ -158,7 +160,7 @@
                                 <h3 class="serif-title mb-2">Recursos de apoyo</h3>
                                 <p class="text-muted mb-3 mb-md-0">Accede a líneas oficiales, información de autocuidado y opciones directas de atención profesional.</p>
                             </div>
-                            <a href="recursos.html" class="btn-calm-outline text-nowrap">Ver recursos <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                            <a href="recursos.html" class="btn-calm-outline text-nowrap">Ver recursos <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -206,11 +208,12 @@
         </div>
     </footer>
 
-    <div class="btn-back-top" id="btnBackTop" title="Volver arriba">
-        <i class="fa-solid fa-arrow-up"></i>
-    </div>
+    <!-- Se cambió a etiqueta button y se agregó aria-label -->
+    <button class="btn-back-top border-0" id="btnBackTop" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/app.js"></script>
 </body>
-</html>
+</html> 
